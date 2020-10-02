@@ -129,8 +129,8 @@ class LivewireServiceProvider extends ServiceProvider
         RouteFacade::get('/livewire/livewire.js', [LivewireJavaScriptAssets::class, 'source']);
         RouteFacade::get('/livewire/livewire.js.map', [LivewireJavaScriptAssets::class, 'maps']);
 
-        RouteFacade::post('/livewire/message/{name}', HttpConnectionHandler::class)
-            ->middleware(config('livewire.middleware_group', 'web'));
+       // RouteFacade::post('/livewire/message/{name}', HttpConnectionHandler::class)
+      //      ->middleware(config('livewire.middleware_group', 'web'));
 
         RouteFacade::post('/livewire/upload-file', [FileUploadHandler::class, 'handle'])
             ->middleware(config('livewire.middleware_group', 'web'))
